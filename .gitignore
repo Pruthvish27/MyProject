@@ -5,7 +5,6 @@ __pycache__/
 
 # Django-related files
 db.sqlite3
-media/
 
 # Logs
 logs/
