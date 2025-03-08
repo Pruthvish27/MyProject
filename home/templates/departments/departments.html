@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles1.css' %}">
+</head>
+<body>
+
+    <h1 class="hospital-name">Hospital Departments</h1>
+
+    <div class="menu">
+        <div class="column">
+            <a href="{% url 'department_detail' department_name='pediatrics' %}">Pediatrics</a>
+            <a href="{% url 'department_detail' department_name='gynecology' %}">Gynecology</a>
+            <a href="{% url 'department_detail' department_name='orthopedics' %}">Orthopedics</a>
+            <a href="{% url 'department_detail' department_name='neurology' %}">Neurology</a>
+            <a href="{% url 'department_detail' department_name='nephrology' %}">Nephrology</a>
+        </div>
+        <div class="column">
+            <a href="{% url 'department_detail' department_name='cardiology' %}">Cardiology</a>
+            <a href="{% url 'department_detail' department_name='gastroenterology' %}">Gastroenterology</a>
+            <a href="{% url 'department_detail' department_name='oncology' %}">Oncology</a>
+            <a href="{% url 'department_detail' department_name='opd' %}">O.P.D</a>
+            <a href="{% url 'department_detail' department_name='otolaryngology' %}">Otolaryngology (ENT)</a>
+        </div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <div class="back">
+        <a href="{% url 'home' %}" class="home-button">⬅ Back to Home</a>
+    </div>
+
+</body>
+</html>
