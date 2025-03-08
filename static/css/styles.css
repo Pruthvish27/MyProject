@@ -1,0 +1,47 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFFF; /* Main Background - White */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.hospital-name {
+    font-size: 60px;  /* Bigger Hospital Name */
+    font-weight: bold;
+    color:#2E8B57; /* Sea Green */
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu a {
+    display: block;
+    width: 350px; /* Bigger Menu Blocks */
+    padding: 20px; /* More Padding */
+    background: #F5FFFA; /* Mint White */
+    color: #556B2F; /* Soft Green for Button Titles */
+    text-decoration: none;
+    font-size: 24px; /* Bigger Font */
+    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #8FBC8F; /* Border matches text color */
+}
+
+.menu a:hover {
+    background: #98FB98; /* Pale Green for Hover Effect */
+    transform: scale(1.05);
+    color: #556B2F; /* Deep Olive Green on Hover for contrast */
+    border-color: #556B2F;
+}
