@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+/* Container */
+.container {
+    background-color: #F5FFFA;
+    width: 50%;
+    padding: 20px;
+    border: 3px solid #8FBC8F;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Center Search and Back Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-box input {
+    width: 60%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #8FBC8F;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid #2E8B57;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-button:hover {
+    background-color: #3CB371;
+    color: white;
+}
+
+/* Centering the Information Box */
+.info-box {
+    border: 3px solid #8FBC8F;
+    padding: 30px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    margin: auto; /* Center it */
+    min-height: 250px;
+}
+
+.info-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 22px;
+    border-bottom: 2px solid #2E8B57;
+    transition: 0.3s ease-in-out;
+}
+
+.info-row:hover {
+    background-color: #E0F8E0;
+}
+
+.detail-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid #2E8B57;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.detail-button:hover {
+    background-color: #3CB371;
+    color: white;
+}
+
+/* Background Blur Effect */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 5;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.blur-in {
+    opacity: 1;
+}
+
+/* Centered Details Box */
+.details-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    max-width: 500px;
+    background: #F5FFFA;
+    padding: 30px;
+    border-radius: 12px;
+    border: 3px solid #8FBC8F;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 10;
+}
+
+/* Animation for Fade In */
+.details-box.fade-in {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Centered Back to Home Button */
+.home-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #2E8B57;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: #3CB371;
+    transform: scale(1.08);
+}
+
+.back {
+    width: 100%;
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+}

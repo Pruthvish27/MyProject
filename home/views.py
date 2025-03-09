@@ -6,5 +6,8 @@ def home(request):
 def departments(request):
     return render(request, 'departments/departments.html')  # Rendering departments.html
 
-# def department_detail(request, department_name):
-#     return render(request, f'departments/{department_name}.html')  # Dynamic rendering
+def room_info(request):
+    return render(request, 'room_info/room_info.html')  # Rendering room_info.html
+
+def report_mapping(request):
+    return render(request, 'report_mapping/report_mapping.html')  # Rendering report_mapping.html

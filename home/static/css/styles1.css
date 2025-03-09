@@ -115,3 +115,34 @@ body {
     background-color: #3CB371;
     transform: scale(1.08);
 }
+/* Animation for details box */
+.details-box {
+    width: 300px;
+    min-height: 220px;
+    background: #F5FFFA;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    border: 3px solid #8FBC8F;
+
+    /* Initially hidden */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Active class for showing */
+.details-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade-out effect */
+.details-box.hide {
+    opacity: 0;
+    transform: translateY(10px);
+}

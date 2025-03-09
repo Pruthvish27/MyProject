@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     path("", views.home, name="home"),  # Home Page
     path('departments/', views.departments, name='departments'),  # Departments Overview
-    #path("departments/<str:department_name>/", views.department_detail, name="department_detail"),  # Dynamic Department Pages
+    path('room_info/', views.room_info, name='room_info'),  # room_info
+    path('report_mapping/', views.report_mapping, name='report_mapping'),  # report_mapping
 ]

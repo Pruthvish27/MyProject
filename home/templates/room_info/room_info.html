@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms Information</title>
+    <link rel="stylesheet" href="{% static 'css/styles2.css' %}">
+    <script>
+        function showDetails(floor) {
+            const detailsBox = document.getElementById("details-box");
+            const overlay = document.getElementById("overlay");
+            detailsBox.innerHTML = `<button class="close-button" onclick="closeDetails()">✖</button>
+                                    <h2>${floor} Floor Details</h2>
+                                    <p>Details about ${floor} floor...</p>`;
+            detailsBox.style.display = "flex";
+            overlay.style.display = "block";
+            setTimeout(() => {
+                detailsBox.classList.add("fade-in");
+                overlay.classList.add("blur-in");
+            }, 10);
+        }
+
+        function closeDetails() {
+            const detailsBox = document.getElementById("details-box");
+            const overlay = document.getElementById("overlay");
+            detailsBox.classList.remove("fade-in");
+            overlay.classList.remove("blur-in");
+            setTimeout(() => {
+                detailsBox.style.display = "none";
+                overlay.style.display = "none";
+            }, 300);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="title">Rooms Information</h2>
+
+        <!-- Search Section -->
+        <div class="search-box">
+            <label for="room-number">Enter Room No.:</label>
+            <input type="text" id="room-number" placeholder="Enter room no.">
+        </div>
+
+        <div class="button-container">
+            <button class="search-button">Search</button>
+        </div>
+
+        <!-- Information Block (Centered) -->
+        <div class="info-box" id="info-box">
+            <h2 class="info-title">INFORMATION :-</h2>
+            <div class="info-row">
+                <span>1<sup>st</sup> Floor</span>
+                <button class="detail-button" onclick="showDetails('1st')">Detail</button>
+            </div>
+            <div class="info-row">
+                <span>2<sup>nd</sup> Floor</span>
+                <button class="detail-button" onclick="showDetails('2nd')">Detail</button>
+            </div>
+            <div class="info-row">
+                <span>3<sup>rd</sup> Floor</span>
+                <button class="detail-button" onclick="showDetails('3rd')">Detail</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Blur Effect -->
+    <div id="overlay" onclick="closeDetails()"></div>
+
+    <!-- Details Box (Centered in Information Block) -->
+    <div class="details-box" id="details-box"></div>
+
+    <!-- Back to Home Button -->
+    <div class="button-container">
+        <a href="{% url 'home' %}" class="home-button">⬅ Back to Home</a>
+    </div>
+
+</body>
+</html>
