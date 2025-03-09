@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,5 +14,66 @@
     </form>
     <br>
     <a href="{% url 'doctor_list' %}">View Doctors</a>
+</body>
+</html> -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Doctor</title>
+    <link rel="stylesheet" href="{% static 'css/styles4.css' %}"> <!-- Link to CSS file -->
+</head>
+<body>
+
+    <h2>Add Doctor</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <input type="hidden" name="csrfmiddlewaretoken" value="xJEHID0fPpRYNRulnLknpE7vMfUacnFlKHalMkyRfReIkn6oy9uXnpLH64HQnZ5h">
+        
+        <p>
+            <label for="id_name">Name:</label>
+            <input type="text" name="name" maxlength="100" required id="id_name">
+        </p>
+
+        <p>
+            <label for="id_ar_time">Arrival Time:</label>
+            <input type="text" name="ar_time" required id="id_ar_time">
+        </p>
+
+        <p>
+            <label for="id_ld_time">Lunch Break Time:</label>
+            <input type="text" name="ld_time" required id="id_ld_time">
+        </p>
+
+        <p>
+            <label for="id_de_time">Departure Time:</label>
+            <input type="text" name="de_time" required id="id_de_time">
+        </p>
+
+        <p>
+            <label for="id_experience">Experience (Years):</label>
+            <input type="number" name="experience" required id="id_experience">
+        </p>
+
+        <p>
+            <label for="id_age">Age:</label>
+            <input type="number" name="age" required id="id_age">
+        </p>
+
+        <p>
+            <label for="id_department">Department:</label>
+            <input type="text" name="department" maxlength="100" required id="id_department">
+        </p> -->
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    <a href="{% url 'doctor_list' %}">View Doctors</a>
+
 </body>
 </html>
