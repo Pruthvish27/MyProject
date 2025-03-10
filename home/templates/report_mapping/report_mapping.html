@@ -1,129 +1,117 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Test Categories</title>
-    <link rel="stylesheet" href="{% static 'css/styles3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/report_styles.css' %}">
 </head>
 <body>
 
     <h1 class="hospital-name">Hospital Test Categories</h1>
 
-    <div class="main-container">
-        <button class="nav-arrow left-arrow" id="left-arrow">⬅</button>
+    <div class="book-container">
+        <button class="nav-arrow left-arrow" id="prev-btn">⬅</button>
 
-        <div class="scroll-container">
-            <div class="scroll-content">
-                <!-- First Section -->
-                <div class="scroll-box">
-                    <h2>🩸 Hematology (Blood Tests)</h2>
-                    <ul>
-                        <li>Complete Blood Count (CBC)</li>
-                        <li>Hemoglobin (Hb)</li>
-                        <li>Erythrocyte Sedimentation Rate (ESR)</li>
-                        <li>Blood Group & Rh Typing</li>
-                        <li>Coagulation Profile (PT, INR, APTT)</li>
-                    </ul>
-                </div>
+        <!-- Page 1 -->
+        <div class="page active">
+            <div class="scroll-box">
+                <h3>🩸 Hematology</h3>
+                <ul>
+                    <li>Complete Blood Count (CBC)</li>
+                    <li>Hemoglobin (Hb)</li>
+                    <li>Erythrocyte Sedimentation Rate (ESR)</li>
+                </ul>
+            </div>
 
-                <div class="scroll-box">
-                    <h2>🧪 Biochemistry</h2>
-                    <ul>
-                        <li>Blood Sugar (Fasting & PP)</li>
-                        <li>Liver Function Test (LFT)</li>
-                        <li>Kidney Function Test (KFT)</li>
-                        <li>Lipid Profile</li>
-                        <li>Electrolytes</li>
-                    </ul>
-                </div>
+            <div class="scroll-box">
+                <h3>🧪 Biochemistry</h3>
+                <ul>
+                    <li>Blood Sugar (Fasting & PP)</li>
+                    <li>Liver Function Test (LFT)</li>
+                    <li>Kidney Function Test (KFT)</li>
+                </ul>
+            </div>
 
-                <div class="scroll-box">
-                    <h2>🦠 Microbiology</h2>
-                    <ul>
-                        <li>Blood Culture</li>
-                        <li>Urine Culture</li>
-                        <li>Sputum Culture</li>
-                        <li>Stool Culture</li>
-                        <li>Tuberculosis (TB) Test</li>
-                    </ul>
-                </div>
-
-                <!-- Second Section -->
-                <div class="scroll-box">
-                    <h2>🧬 Serology & Immunology</h2>
-                    <ul>
-                        <li>HIV Test</li>
-                        <li>Hepatitis B & C</li>
-                        <li>Widal Test (Typhoid)</li>
-                        <li>Rheumatoid Factor (RA Test)</li>
-                        <li>C-Reactive Protein (CRP)</li>
-                    </ul>
-                </div>
-
-                <div class="scroll-box">
-                    <h2>🔬 Pathology</h2>
-                    <ul>
-                        <li>Urine Routine & Microscopy</li>
-                        <li>Stool Examination</li>
-                        <li>Sputum Examination</li>
-                        <li>FNAC</li>
-                        <li>Biopsy</li>
-                    </ul>
-                </div>
-
-                <div class="scroll-box">
-                    <h2>📷 Radiology & Imaging</h2>
-                    <ul>
-                        <li>X-Ray</li>
-                        <li>Ultrasound (USG)</li>
-                        <li>CT Scan</li>
-                        <li>MRI Scan</li>
-                        <li>Mammography</li>
-                    </ul>
-                </div>
-
-                <!-- Third Section -->
-                <div class="scroll-box">
-                    <h2>❤️ Cardiology Tests</h2>
-                    <ul>
-                        <li>Electrocardiogram (ECG/EKG)</li>
-                        <li>2D Echocardiography (Echo)</li>
-                        <li>Treadmill Test (TMT)</li>
-                        <li>Holter Monitoring</li>
-                        <li>Cardiac Enzymes</li>
-                    </ul>
-                </div>
-
-                <div class="scroll-box">
-                    <h2>🧠 Endocrinology</h2>
-                    <ul>
-                        <li>Thyroid Function Test (T3, T4, TSH)</li>
-                        <li>Cortisol Test</li>
-                        <li>Insulin Test</li>
-                        <li>Testosterone & Estrogen Levels</li>
-                        <li>Parathyroid Hormone (PTH)</li>
-                    </ul>
-                </div>
-
-                <div class="scroll-box">
-                    <h2>🦠 Infectious Disease & PCR Tests</h2>
-                    <ul>
-                        <li>COVID-19 RT-PCR</li>
-                        <li>Dengue NS1 & IgM</li>
-                        <li>Malaria Parasite Test</li>
-                        <li>Chikungunya Test</li>
-                        <li>H1N1 (Swine Flu) Test</li>
-                    </ul>
-                </div>
+            <div class="scroll-box">
+                <h3>🦠 Microbiology</h3>
+                <ul>
+                    <li>Blood Culture</li>
+                    <li>Urine Culture</li>
+                    <li>Sputum Culture</li>
+                </ul>
             </div>
         </div>
 
-        <button class="nav-arrow right-arrow" id="right-arrow">➡</button>
+        <!-- Page 2 -->
+        <div class="page">
+            <div class="scroll-box">
+                <h3>🧬 Serology & Immunology</h3>
+                <ul>
+                    <li>HIV Test</li>
+                    <li>Hepatitis B & C</li>
+                    <li>C-Reactive Protein (CRP)</li>
+                </ul>
+            </div>
+
+            <div class="scroll-box">
+                <h3>🔬 Pathology</h3>
+                <ul>
+                    <li>Urine Routine & Microscopy</li>
+                    <li>Stool Examination</li>
+                    <li>Biopsy</li>
+                </ul>
+            </div>
+
+            <div class="scroll-box">
+                <h3>📷 Radiology & Imaging</h3>
+                <ul>
+                    <li>X-Ray</li>
+                    <li>Ultrasound (USG)</li>
+                    <li>CT Scan</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="page">
+            <div class="scroll-box">
+                <h3>❤️ Cardiology</h3>
+                <ul>
+                    <li>Electrocardiogram (ECG/EKG)</li>
+                    <li>2D Echocardiography (Echo)</li>
+                    <li>Treadmill Test (TMT)</li>
+                </ul>
+            </div>
+
+            <div class="scroll-box">
+                <h3>🧠 Endocrinology</h3>
+                <ul>
+                    <li>Thyroid Function Test (T3, T4, TSH)</li>
+                    <li>Insulin Test</li>
+                    <li>Parathyroid Hormone (PTH)</li>
+                </ul>
+            </div>
+
+            <div class="scroll-box">
+                <h3>🦠 Infectious Disease</h3>
+                <ul>
+                    <li>COVID-19 RT-PCR</li>
+                    <li>Dengue NS1 & IgM</li>
+                    <li>Malaria Parasite Test</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="nav-arrow right-arrow" id="next-btn">➡</button>
     </div>
 
-    <script src="{% static 'js/script1.js' %}"></script>
+    <!-- Back to Home Block -->
+    <div class="back-container">
+        <a href="{% url 'home' %}" class="home-button">🏠 Back to Home</a>
+    </div>
+
+    <script src="{% static 'js/report_script.js' %}"></script>
 
 </body>
 </html>
