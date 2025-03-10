@@ -1,13 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".scroll-container");
-    const rightArrow = document.getElementById("right-arrow");
-    const leftArrow = document.getElementById("left-arrow");
+    const pages = document.querySelectorAll(".page");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    let currentPage = 0;
 
-    function scroll(direction) {
-        const scrollAmount = window.innerWidth * (1 / 3) * 3; // Scroll 3 sections at a time
-        scrollContainer.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+    // Function to update page visibility
+    function updatePages() {
+        pages.forEach((page, index) => {
+            page.classList.toggle("active", index === currentPage);
+        });
+
+        // Hide/show buttons based on page index
+        prevBtn.style.display = currentPage === 0 ? "none" : "block";
+        nextBtn.style.display = currentPage === pages.length - 1 ? "none" : "block";
     }
 
-    rightArrow.addEventListener("click", () => scroll(1));
-    leftArrow.addEventListener("click", () => scroll(-1));
+    // Next button functionality
+    nextBtn.addEventListener("click", function () {
+        if (currentPage < pages.length - 1) {
+            currentPage++;
+            updatePages();
+        }
+    });
+
+    // Previous button functionality
+    prevBtn.addEventListener("click", function () {
+        if (currentPage > 0) {
+            currentPage--;
+            updatePages();
+        }
+    });
+
+    // Initialize page display
+    updatePages();
 });
