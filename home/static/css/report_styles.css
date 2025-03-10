@@ -1,0 +1,177 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hospital-name {
+    font-size: 54px; /* Increased by 20% */
+    font-weight: bold;
+    color: #2E8B57;
+    text-align: center;
+    margin-top: 24px; /* Increased by 20% */
+}
+
+/* Book container - Lower the content */
+.book-container {
+    width: 100.8%; /* Increased by 20% */
+    max-width: 1176px; /* Increased by 20% */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 84px; /* Increased by 20% */
+}
+
+/* Page Styles */
+.page {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 16.8px; /* Increased by 20% */
+}
+
+.page.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px; /* Increased by 20% */
+}
+
+/* Scroll Box Styles */
+.scroll-box {
+    width: 336px; /* Increased by 20% */
+    min-width: 336px; /* Increased by 20% */
+    height: 210px; /* Increased by 20% */
+    padding: 25.2px; /* Increased by 20% */
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
+    border: 4px solid #8FBC8F;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hover Effect */
+.scroll-box:hover {
+    transform: scale(1.08);
+    box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Header */
+.scroll-box h3 {
+    font-size: 21.6px; /* Increased by 20% */
+    color: #2E8B57;
+    font-weight: bold;
+    margin-bottom: 8.4px; /* Increased by 20% */
+}
+
+/* List */
+.scroll-box ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px; /* Increased by 20% */
+}
+
+.scroll-box ul li {
+    font-size: 18px; /* Increased by 20% */
+    margin: 8.4px 0; /* Increased by 20% */
+}
+
+/* Navigation Buttons */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25.2px; /* Increased by 20% */
+    background: #2E8B57;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15.12px 20.16px; /* Increased by 20% */
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Move Arrows Further Outside */
+.left-arrow {
+    left: -107px;  /* Increased by 20% */
+}
+
+.right-arrow {
+    right: -140px; /* Increased by 20% */
+}
+
+/* Remove Animation on Hover */
+.nav-arrow:hover {
+    background: #1E5B3F;
+}
+
+/* Responsive Fix */
+@media (max-width: 1024px) {
+    .book-container {
+        flex-direction: column;
+        margin-top: 42px; /* Increased by 20% */
+    }
+
+    .page.active {
+        flex-direction: column;
+        align-items: center;
+        gap: 25.2px; /* Increased by 20% */
+    }
+
+    .scroll-box {
+        width: 100.8%; /* Increased by 20% */
+        min-width: auto;
+    }
+
+    .nav-arrow {
+        position: fixed;
+        top: 50%;
+    }
+
+    .left-arrow {
+        left: 8.4px; /* Increased by 20% */
+    }
+
+    .right-arrow {
+        right: 8.4px; /* Increased by 20% */
+    }
+}
+
+/* Back to Home Button - Standalone */
+.home-button {
+    display: inline-block;
+    margin-top: 42px; /* Increased by 20% */
+    padding: 12.6px 33.6px; /* Increased by 20% */
+    font-size: 18px; /* Increased by 20% */
+    font-weight: bold;
+    color: white;
+    background-color: #2E8B57;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: none; /* Ensure no extra border */
+    text-align: center;
+}
+
+/* Hover Effect */
+.home-button:hover {
+    background-color: #3CB371;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}

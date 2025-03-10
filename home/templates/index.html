@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Home Page</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index_styles.css' %}">
 </head>
 <body>
 
     <div class="hospital-name">HOSPITAL NAME</div>
 
     <div class="menu">
-        <a href="{% url 'departments' %}">Departments</a>
+        <a href="{% url 'departments' %}">Department</a> 
         <a href="{% url 'room_info' %}">Rooms Information</a>
         <a href="{% url 'report_mapping' %}">Report Mapping</a>
     </div>

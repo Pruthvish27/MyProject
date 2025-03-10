@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Test Categories</title>
-    <link rel="stylesheet" href="{% static 'css/styles3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/report_styles.css' %}">
 </head>
 <body>
 
     <h1 class="hospital-name">Hospital Test Categories</h1>
 
     <div class="book-container">
-        <button class="nav-arrow left-arrow" id="prev-btn" ><</button>
- 
+        <button class="nav-arrow left-arrow" id="prev-btn"><</button>
+
         <!-- Page 1 -->
         <div class="page active">
             <div class="scroll-box">
@@ -108,7 +108,12 @@
         <button class="nav-arrow right-arrow" id="next-btn">></button>
     </div>
 
-    <script src="{% static 'js/script1.js' %}"></script>
+    <!-- Back to Home Block -->
+    <div class="back-container">
+        <a href="{% url 'home' %}" class="home-button">🏠 Back to Home</a>
+    </div>
+
+    <script src="{% static 'js/report_script.js' %}"></script>
 
 </body>
 </html>

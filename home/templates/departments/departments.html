@@ -6,45 +6,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Departments</title>
-    <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dept_styles.css' %}">
 </head>
 <body>
 
     <h1 class="hospital-name">HOSPITAL DEPARTMENTS</h1>
 
+    <!-- Single Box for Departments -->
     <div class="container">
-        <!-- Left Detail Box -->
-        <div id="left-details" class="details-box"></div>
+        <div class="menu">
+            <!-- Left Column -->
+            <div class="column">
+                <a href="#" onclick="showDetails('Pediatrics')">Pediatrics</a>
+                <a href="#" onclick="showDetails('Gynecology')">Gynecology</a>
+                <a href="#" onclick="showDetails('Orthopedics')">Orthopedics</a>
+                <a href="#" onclick="showDetails('Neurology')">Neurology</a>
+                <a href="#" onclick="showDetails('Nephrology')">Nephrology</a>
+            </div>
 
-        <!-- Department Buttons -->
-        <div class="menu-container">
-            <div class="menu">
-                <div class="column">
-                    <a href="#" onclick="showDetails('Pediatrics', 'left')">Pediatrics</a>
-                    <a href="#" onclick="showDetails('Gynecology', 'left')">Gynecology</a>
-                    <a href="#" onclick="showDetails('Orthopedics', 'left')">Orthopedics</a>
-                    <a href="#" onclick="showDetails('Neurology', 'left')">Neurology</a>
-                    <a href="#" onclick="showDetails('Nephrology', 'left')">Nephrology</a>
-                </div>
-                <div class="column">
-                    <a href="#" onclick="showDetails('Cardiology', 'right')">Cardiology</a>
-                    <a href="#" onclick="showDetails('Gastroenterology', 'right')">Gastroenterology</a>
-                    <a href="#" onclick="showDetails('Oncology', 'right')">Oncology</a>
-                    <a href="#" onclick="showDetails('O.P.D', 'right')">O.P.D</a>
-                    <a href="#" onclick="showDetails('Otolaryngology (ENT)', 'right')">Otolaryngology (ENT)</a>
-                </div>
+            <!-- Right Column -->
+            <div class="column">
+                <a href="#" onclick="showDetails('Cardiology')">Cardiology</a>
+                <a href="#" onclick="showDetails('Gastroenterology')">Gastroenterology</a>
+                <a href="#" onclick="showDetails('Oncology')">Oncology</a>
+                <a href="#" onclick="showDetails('O.P.D')">O.P.D</a>
+                <a href="#" onclick="showDetails('Otolaryngology (ENT)')">Otolaryngology (ENT)</a>
             </div>
         </div>
-
-        <!-- Right Detail Box -->
-        <div id="right-details" class="details-box"></div>
     </div>
 
-    <!-- Back to Home Button -->
+    <!-- Overlay and Detail Box -->
+    <div id="overlay" onclick="closeDetails()"></div>
+
+    <div id="details-box" class="details-box">
+        <button class="close-button" onclick="closeDetails()">✖</button>
+        <h2 id="dept-title"></h2>
+        <p id="dept-info"></p>
+    </div>
+
     <div class="back">
         <a href="{% url 'home' %}" class="home-button">⬅ Back to Home</a>
     </div>
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/dept_script.js' %}"></script>
+
 </body>
 </html>
