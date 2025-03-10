@@ -106,11 +106,11 @@ body {
 
 /* Move Arrows Further Outside */
 .left-arrow {
-    left: -50.4px;  /* Increased by 20% */
+    left: -95.6px;  /* Increased by 20% */
 }
 
 .right-arrow {
-    right: -50.4px; /* Increased by 20% */
+    right: -124.6px; /* Increased by 20% */
 }
 
 /* Remove Animation on Hover */
