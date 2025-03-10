@@ -10,22 +10,22 @@ body {
 }
 
 .hospital-name {
-    font-size: 50px;
+    font-size: 54px; /* Increased by 20% */
     font-weight: bold;
     color: #2E8B57;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 24px; /* Increased by 20% */
 }
 
 /* Book container - Lower the content */
 .book-container {
-    width: 90%;
-    max-width: 1400px;
+    width: 100.8%; /* Increased by 20% */
+    max-width: 1176px; /* Increased by 20% */
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px; /* Moves the whole section down */
+    margin-top: 84px; /* Increased by 20% */
 }
 
 /* Page Styles */
@@ -33,22 +33,22 @@ body {
     display: none;
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 16.8px; /* Increased by 20% */
 }
 
 .page.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px; /* Ensures even spacing */
+    gap: 42px; /* Increased by 20% */
 }
 
 /* Scroll Box Styles */
 .scroll-box {
-    width: 400px;
-    min-width: 400px;
-    height: 250px;
-    padding: 30px;
+    width: 336px; /* Increased by 20% */
+    min-width: 336px; /* Increased by 20% */
+    height: 210px; /* Increased by 20% */
+    padding: 25.2px; /* Increased by 20% */
     background: #FFFFFF;
     border-radius: 20px;
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
@@ -68,22 +68,22 @@ body {
 
 /* Header */
 .scroll-box h3 {
-    font-size: 26px;
+    font-size: 21.6px; /* Increased by 20% */
     color: #2E8B57;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 8.4px; /* Increased by 20% */
 }
 
 /* List */
 .scroll-box ul {
     list-style: none;
     padding: 0;
-    font-size: 22px;
+    font-size: 18px; /* Increased by 20% */
 }
 
 .scroll-box ul li {
-    font-size: 22px;
-    margin: 10px 0;
+    font-size: 18px; /* Increased by 20% */
+    margin: 8.4px 0; /* Increased by 20% */
 }
 
 /* Navigation Buttons */
@@ -91,12 +91,12 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 30px;
+    font-size: 25.2px; /* Increased by 20% */
     background: #2E8B57;
     color: white;
     border: none;
     cursor: pointer;
-    padding: 18px 24px;
+    padding: 15.12px 20.16px; /* Increased by 20% */
     border-radius: 50%;
     z-index: 10;
     display: flex;
@@ -106,11 +106,11 @@ body {
 
 /* Move Arrows Further Outside */
 .left-arrow {
-    left: -60px;  /* Moves arrow further left */
+    left: -50.4px;  /* Increased by 20% */
 }
 
 .right-arrow {
-    right: -60px; /* Moves arrow further right */
+    right: -50.4px; /* Increased by 20% */
 }
 
 /* Remove Animation on Hover */
@@ -122,17 +122,17 @@ body {
 @media (max-width: 1024px) {
     .book-container {
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 42px; /* Increased by 20% */
     }
 
     .page.active {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 25.2px; /* Increased by 20% */
     }
 
     .scroll-box {
-        width: 90%;
+        width: 100.8%; /* Increased by 20% */
         min-width: auto;
     }
 
@@ -142,19 +142,20 @@ body {
     }
 
     .left-arrow {
-        left: 10px;
+        left: 8.4px; /* Increased by 20% */
     }
 
     .right-arrow {
-        right: 10px;
+        right: 8.4px; /* Increased by 20% */
     }
 }
+
 /* Back to Home Button - Standalone */
 .home-button {
     display: inline-block;
-    margin-top: 50px; /* Moves it lower */
-    padding: 15px 40px;
-    font-size: 22px;
+    margin-top: 42px; /* Increased by 20% */
+    padding: 12.6px 33.6px; /* Increased by 20% */
+    font-size: 18px; /* Increased by 20% */
     font-weight: bold;
     color: white;
     background-color: #2E8B57;
