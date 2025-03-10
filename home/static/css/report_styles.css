@@ -106,11 +106,11 @@ body {
 
 /* Move Arrows Further Outside */
 .left-arrow {
-    left: -100px;  /* Increased by 20% */
+    left: -85px;  /* Increased by 20% */
 }
 
 .right-arrow {
-    right: -130px; /* Increased by 20% */
+    right: -120px; /* Increased by 20% */
 }
 
 .nav-arrow:hover {
