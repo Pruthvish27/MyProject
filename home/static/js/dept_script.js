@@ -11,16 +11,19 @@ const departmentDetails = {
     "Otolaryngology (ENT)": "ENT focuses on ear, nose, and throat conditions."
 };
 
+// Function to show details box
 function showDetails(dept) {
     document.getElementById("dept-title").innerText = dept;
     document.getElementById("dept-info").innerText = departmentDetails[dept];
     document.getElementById("overlay").style.display = "block";
-    document.getElementById("details-box").classList.add("fade-in");
     document.getElementById("details-box").style.display = "block";
 }
 
+// Function to close details box
 function closeDetails() {
     document.getElementById("overlay").style.display = "none";
-    document.getElementById("details-box").classList.remove("fade-in");
     document.getElementById("details-box").style.display = "none";
 }
+
+// Close when clicking outside of the details box
+document.getElementById("overlay").addEventListener("click", closeDetails);
