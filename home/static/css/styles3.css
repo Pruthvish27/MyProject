@@ -122,7 +122,6 @@ body {
     color: white;
 }
 
-/* Responsive Fix */
 @media (max-width: 1024px) {
     .book-container {
         flex-direction: column;
