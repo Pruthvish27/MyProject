@@ -113,12 +113,10 @@ body {
     right: -140px; /* Increased by 20% */
 }
 
-/* Remove Animation on Hover */
 .nav-arrow:hover {
     background: #1E5B3F;
 }
 
-/* Responsive Fix */
 @media (max-width: 1024px) {
     .book-container {
         flex-direction: column;
