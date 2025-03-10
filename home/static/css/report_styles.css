@@ -17,7 +17,7 @@ body {
     margin-top: 20px;
 }
 
-
+/* Book container - Lower the content */
 .book-container {
     width: 90%;
     max-width: 1400px;
@@ -25,10 +25,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 100px; /* Moves the whole section down */
 }
 
-
+/* Page Styles */
 .page {
     display: none;
     width: 100%;
@@ -40,10 +40,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 50px; /* Ensures even spacing */
 }
 
-
+/* Scroll Box Styles */
 .scroll-box {
     width: 400px;
     min-width: 400px;
@@ -60,12 +60,13 @@ body {
     justify-content: center;
 }
 
-
+/* Hover Effect */
 .scroll-box:hover {
     transform: scale(1.08);
     box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.35);
 }
 
+/* Header */
 .scroll-box h3 {
     font-size: 26px;
     color: #2E8B57;
@@ -73,6 +74,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* List */
 .scroll-box ul {
     list-style: none;
     padding: 0;
@@ -84,6 +86,7 @@ body {
     margin: 10px 0;
 }
 
+/* Navigation Buttons */
 .nav-arrow {
     position: absolute;
     top: 50%;
@@ -91,7 +94,7 @@ body {
     font-size: 30px;
     background: #2E8B57;
     color: white;
-    border: 4px solid #2E8B57;
+    border: none;
     cursor: pointer;
     padding: 18px 24px;
     border-radius: 50%;
@@ -101,27 +104,21 @@ body {
     justify-content: center;
 }
 
-.left-arrow::before {
-    content: '';
-}
-
-.right-arrow::before {
-    content: '';
-}
-
+/* Move Arrows Further Outside */
 .left-arrow {
-    left: -60px; 
+    left: -60px;  /* Moves arrow further left */
 }
 
 .right-arrow {
-    right: -60px;
+    right: -60px; /* Moves arrow further right */
 }
 
+/* Remove Animation on Hover */
 .nav-arrow:hover {
-    background: #2E8B57;
-    color: white;
+    background: #1E5B3F;
 }
 
+/* Responsive Fix */
 @media (max-width: 1024px) {
     .book-container {
         flex-direction: column;
@@ -143,4 +140,37 @@ body {
         position: fixed;
         top: 50%;
     }
+
+    .left-arrow {
+        left: 10px;
+    }
+
+    .right-arrow {
+        right: 10px;
+    }
+}
+/* Back to Home Button - Standalone */
+.home-button {
+    display: inline-block;
+    margin-top: 50px; /* Moves it lower */
+    padding: 15px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background-color: #2E8B57;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: none; /* Ensure no extra border */
+    text-align: center;
+}
+
+/* Hover Effect */
+.home-button:hover {
+    background-color: #3CB371;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }

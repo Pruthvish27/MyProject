@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.hospital-name {
+    font-size: 50px;
+    font-weight: bold;
+    color: #2E8B57;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Bigger Centered Box */
+.container {
+    background-color: #F5FFFA;
+    width: 40%; /* Increased width */
+    max-width: 900px; /* Prevents it from getting too large on bigger screens */
+    padding: 40px; /* More padding for spacing */
+    border: 4px solid #8FBC8F; /* Slightly thicker border */
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow effect */
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* Department Layout (Two Columns) */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 20 px; /* Increased gap between columns */
+}
+
+/* Columns */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased spacing between buttons */
+}
+
+/* Bigger Department Buttons */
+.menu a {
+    display: block;
+    width: 250px; /* Increased width */
+    padding: 22px; /* More padding for better spacing */
+    background: #FFFFFF;
+    color: #2E8B57;
+    text-decoration: none;
+    font-size: 22px; /* Bigger font for better readability */
+    font-weight: bold;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid #8FBC8F; /* Thicker border */
+}
+
+.menu a:hover {
+    background: #98FB98;
+    transform: scale(1.08);
+    color: #556B2F;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 5;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Bigger Centered Details Box */
+.details-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%; /* Increased width */
+    max-width: 600px; /* Slightly bigger max width */
+    background: #F5FFFA;
+    padding: 40px; /* More padding for better spacing */
+    border-radius: 15px;
+    border: 4px solid #8FBC8F;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.details-box.fade-in {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Bigger Back to Home Button */
+.back {
+    margin-top: 30px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 18px 35px;
+    font-size: 22px; /* Bigger font */
+    font-weight: bold;
+    color: white;
+    background-color: #2E8B57;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: #3CB371;
+    transform: scale(1.08);
+}
