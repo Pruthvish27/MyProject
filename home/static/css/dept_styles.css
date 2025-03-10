@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+/* Hospital Name */
+.hospital-name {
+    font-size: 50px;
+    font-weight: bold;
+    color: #2E8B57;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for Departments */
+.container {
+    background-color: #F5FFFA;
+    width: 50%;
+    max-width: 900px;
+    padding: 40px;
+    border: 4px solid #8FBC8F;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Department Menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Department Column */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Department Buttons */
+.menu a {
+    display: block;
+    width: 300px;
+    padding: 18px;
+    background: #FFFFFF;
+    color: #2E8B57;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid #8FBC8F;
+}
+
+.menu a:hover {
+    background: #98FB98;
+    transform: scale(1.08);
+    color: #556B2F;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 5;
+}
+
+/* Details Box */
+.details-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 1000px;
+    min-height: 400px;
+    background: #F5FFFA;
+    padding: 40px;
+    border-radius: 15px;
+    border: 4px solid #8FBC8F;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 10;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Back to Home Button */
+.back {
+    margin-top: 30px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #2E8B57;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: #3CB371;
+    transform: scale(1.08);
+}
+    
